@@ -33,7 +33,7 @@ const login = async (req, res) => {
     if (!existinguser) {
       return res.status(404).json({ message: "User dont exist" });
     }
-    const isPasswordCrt = awwaitbcrypt.compare(password, existinguser.password);
+    const isPasswordCrt = awaitbcrypt.compare(password, existinguser.password);
     if (!isPasswordCrt) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
